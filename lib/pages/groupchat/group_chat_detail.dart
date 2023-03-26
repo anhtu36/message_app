@@ -215,22 +215,27 @@ class GroupChatDetail extends StatelessWidget {
                                 offset: Offset(0, 10)),
                           ],
                           borderRadius: BorderRadius.circular(20)),
-                      child: TextField(
-                        style: GoogleFonts.poppins(color: Colors.black),
-                        controller: _message,
-                        decoration: InputDecoration(
-                          border: InputBorder.none,
-                          suffixIcon: IconButton(
-                            onPressed: () => getImage(),
-                            icon: Icon(
-                              Icons.crop_original_rounded,
-                              color: Colors.red[900],
-                              size: size.width / 15,
+                      child: Container(
+                        width: size.width / 1.2,
+                        padding:
+                            EdgeInsets.symmetric(horizontal: size.width / 20),
+                        child: TextField(
+                          style: GoogleFonts.poppins(color: Colors.black),
+                          controller: _message,
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                            suffixIcon: IconButton(
+                              onPressed: () => getImage(),
+                              icon: Icon(
+                                Icons.crop_original_rounded,
+                                color: Colors.red[900],
+                                size: size.width / 15,
+                              ),
                             ),
+                            hintText: "Send a message",
+                            hintStyle: GoogleFonts.poppins(
+                                color: Colors.grey.shade600),
                           ),
-                          hintText: "   " "Send a message",
-                          hintStyle:
-                              GoogleFonts.poppins(color: Colors.grey.shade600),
                         ),
                       ),
                     ),

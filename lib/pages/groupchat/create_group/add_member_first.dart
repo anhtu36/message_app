@@ -180,7 +180,7 @@ class _AddMemberWhenCreateGroupState extends State<AddMemberWhenCreateGroup> {
                         offset: Offset(0, 10)),
                   ],
                   borderRadius: BorderRadius.circular(20)),
-              child: Container(
+              child: SizedBox(
                 width: size.width / 1.2,
                 child: TextField(
                   controller: _search,

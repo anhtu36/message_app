@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:message_app/pages/groupchat/group_chat_screen.dart';
-import 'package:message_app/repository/login_auth.dart';
-import 'package:message_app/services/add_member.dart';
 import 'package:message_app/services/login/login_screen.dart';
 
 class Authenticate extends StatelessWidget {
