@@ -196,36 +196,27 @@ class _AddMemberWhenCreateGroupState extends State<AddMemberWhenCreateGroup> {
             SizedBox(
               height: size.height / 50,
             ),
-            isLoading
-                ? Container(
-                    height: size.height / 12,
-                    width: size.height / 12,
-                    alignment: Alignment.center,
-                    child: const CircularProgressIndicator(
-                      color: Colors.black,
-                    ),
-                  )
-                : GestureDetector(
-                    onTap: () {
-                      if (_search.text.isEmpty) {
-                        Utils.snackBar('Please enter the phonenumber', context);
-                      } else {
-                        onSearch();
-                      }
-                    },
-                    child: Container(
-                      height: size.height / 18,
-                      width: size.width / 4,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Colors.red[900],
-                      ),
-                      child: Center(
-                        child: Text('Search',
-                            style: GoogleFonts.poppins(color: Colors.white)),
-                      ),
-                    ),
-                  ),
+            InkWell(
+              onTap: () {
+                if (_search.text.isEmpty) {
+                  Utils.snackBar('Please enter the phonenumber', context);
+                } else {
+                  onSearch();
+                }
+              },
+              child: Container(
+                height: size.height / 18,
+                width: size.width / 4,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: Colors.red[900],
+                ),
+                child: Center(
+                  child: Text('Search',
+                      style: GoogleFonts.poppins(color: Colors.white)),
+                ),
+              ),
+            ),
             SizedBox(
               height: size.height / 30,
             ),
